@@ -25,10 +25,11 @@ namespace HundredChicken.ConsoleApp
                 {
                     if (CockAmount * 14 + HenAmount * 8 == 200)
                     {
-                        int ChickAmount = 100 - CockAmount - HenAmount;//小雞數量=小雞花費*3
+                        int ChickAmount = 100 - CockAmount - HenAmount;//小雞數量=100-公雞數量-母雞數量
                         Console.WriteLine($"公雞{CockAmount}隻," +
                                           $"母雞{HenAmount}隻," +
                                           $"小雞{ChickAmount}隻");
+                        break;//CockAmount為常數時,聯立方程為線性獨立,有唯一解
                     }
                 }
             }
